@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home</title>
+    <!-- ----------------------------Boothstrap--------------------------- -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"rel="stylesheet"integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"crossorigin="anonymous"/>
+
+    <!-- ----------------Css------------------------ -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!---------------------- Google Fonts ------------------------>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+
+    <!------------------------ Fontawsome ------------------------------->
+    <script src="https://kit.fontawesome.com/9ff2a5f6db.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+     <!-- -------------------------About Us---------------------------- -->
+     <section id="reservation">
+        <div class="container-fluid">
+          <!------------------ Nav Bar------------------- -->
+          <nav class="navbar navbar-expand-lg navbar-dark">
+            <!--navbar navbar-expand-lg converts the navbar list from vertical to horizontal and lg indicates for laptop-->
+            <a class="navbar-brand" href="index.html"><b>NEWLIFE</b></a>
+            <!-- button is the navbar toggler which will make the navbar responsive -->
+            <!-- navbar-toggler class is a applies the necessary CSS styles to create the toggle button appearance.
+          data-bs-toggle="collapse" specifies that the button is used to toggle the visibility of a collapsible element, in this case, a navbar collapse.
+          data-bs-target="#Urmil": This data attribute specifies the target element that will be collapsed or expanded when the button is clicked.
+          aria-expanded="false" indicates the initial state of the collapsible element .-->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#Urmil"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+              <!-- It is a Bootstrap-specific class that displays an icon inside the button. By default, it renders as three horizontal lines, representing the toggle icon -->
+            </button>
+            <!-- the toggler will collapse the ul list the id and data-bs-target values must be same  -->
+            <div class="collapse navbar-collapse" id="Urmil">
+              <!-- collapse: This class is used to create a collapsible element.
+                  navbar-collapse: It ensures that the content collapses and expands correctly when the toggle button is clicked. -->
+              <ul class="navbar-nav ms-auto">
+                <!-- navbar-nav: This class is used to style an unordered list (<ul>) as a navigation menu. -->
+                <!--ms-auto in ul shifts the cl to right-->
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="reservation.html">Contact</a>
+                </li>
+                <li><a href="reservation.html"><button class="btn">Take Action</button></a></li>
+              </ul>
+            </div>
+          </nav>
+          <!--------------------------- Heading ----------------------->
+          <div class="head2">
+            <h1 class="heading">TAKE THE LEAP</h1>
+          </div>
+        </div>
+      </section>
+      <!-------------------------------- Form--------------------------------------------->
+      <h1 class="under jour" style="font-weight: bold; text-align: center; margin-top: 100px; margin-bottom: 0px;">Reserve your Journey</h1>
+      <section id="book-form">
+        <div class="container-fluid">
+          <form action="" method="POST">
+            <h2 class="detail" style="margin-top:10px;">Contact Details</h2>
+            <div class="row row3">
+              <div class="col-lg-12">
+                <label>Your Full Name<span> *</span></label><br>
+                <input type="text" id="name" name="name" required style="width: 100%; height:35px;">
+              </div>
+            </div>
+            <div class="row row3">
+              <div class="col-lg-6 col-md-12 col-sm-12">
+                <label for="email">Email:</label><span> *</span><br>
+                <input type="email" id="email" name="email" style="width: 90%;height:35px;" required>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12">
+                <label>Phone:</label><span> *</span><br>
+                <input type="tel" id="phone" name="phone" required style="width: 100%;height:35px;">
+              </div>
+            </div>
+            <div class="row row3">
+              <div class="col-lg-12">
+                <label>Address:</label><span> *</span><br>
+                <textarea id="address" name="address" rows="2" required style="width: 100%;"></textarea>
+              </div>
+            </div>
+            
+            <h2 class="detail">Reservation Details</h2>
+            <div class="row row3" >
+              <div class="col-lg-4 col-md-12 col-sm-12">
+                <label>Preferred Date:</label><span> *</span>
+                <input type="date" id="date" name="date" required style="width: 60%;">  
+              </div>
+              <div class="col-lg-4 col-md-12 col-sm-12">
+                <label class="space">Preferred Time:</label><span> *</span>
+                <input type="time" id="time" name="time" required style="width: 60%;">  
+              </div>
+              <div class="col-lg-4 col-md-12 col-sm-12">
+                <label class="space">Number of People:</label><span> *</span>
+                <input type="number" id="group-size" name="group-size" required style="width: 50%;"> 
+              </div>
+            </div>
+            
+            <h2 class="detail">Accommodation Options</h2>
+            <div class="row row3">
+              <div class="col-lg-12 col-md-12 col-sm-12" >
+                <label>Accommodation Preferences:</label>
+                <select id="accommodation" name="accommodation" style="width: 100%; height:35px;">
+                  <option value="">Choose an option</option>
+                  <option value="camping">Camping</option>
+                  <option value="cabins">Cabins</option>
+                  <option value="lodges">Lodges</option>
+                  <option value="treehouses">Treehouses</option>
+                  <option value="houseboats">Houseboats</option>
+                </select>
+              </div>
+            </div>
+            <div class="row row3">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <label class="req">Specific Requirements:</label>
+                <textarea id="specific-requirements" name="specific-requirements" rows="2" style="width: 100%;"></textarea>
+              </div>
+            </div>
+            
+            <h2 class="detail">Activities and Tours</h2>
+            <!-- <p>Please select the activities and tours you are interested in:</p> -->
+            <div class="row row3">
+              <p>Please select the activities and tours you are interested in:</p>
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                <input type="checkbox" id="guided-tour" name="activities[]" value="guided-tour">
+                <label for="guided-tour">Guided Tour</label>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                <input type="checkbox" id="adventure-activities" name="activities[]" value="adventure-activities">
+                <label for="adventure-activities">Adventure Activities</label>
+
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                <input type="checkbox" id="specific-programs" name="activities[]" value="specific-programs">
+                <label for="specific-programs">Specific Programs</label>
+              </div>
+            </div>
+
+            <div class="row row3">
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                <input type="checkbox" id="scuba-diving" name="activities[]" value="scuba-diving">
+                <label for="scuba-diving">Scuba Diving</label>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                <input type="checkbox" id="hiking-adventure" name="activities[]" value="hiking-adventure">
+                <label for="hiking-adventure">Hiking Adventure</label>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                <input type="checkbox" id="snorkeling-trip" name="activities[]" value="snorkeling-trip">
+                <label for="snorkeling-trip">Snorkeling Trip</label>
+              </div>
+            </div>
+
+            <div class="row row3">
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                <input type="checkbox" id="kayaking-excursion" name="activities[]" value="kayaking-excursion">
+                <label for="kayaking-excursion">Kayaking Excursion</label>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                <input type="checkbox" id="cultural-tour" name="activities[]" value="cultural-tour">
+                <label for="cultural-tour">Cultural Tour</label>
+              </div>
+            </div>
+            
+            <h2 class="detail">Special Requests</h2>
+            <div class="row row3">
+              <div class="col">
+              <label>Mention Here:</label>
+              <textarea id="special-requests" name="special-requests" rows="2" style="width:100%"></textarea>
+              </div>
+            </div>
+            
+            <div class="row" style="display: flex; flex-direction: row; text-align:center; margin-bottom: 20px; margin-top:50px">
+              <div class="col">
+                <input type="submit" value="Submit" class="book-btn" style="width: 150px;">
+                <!-- Here value attribute is just there to show the text which will be on the button -->
+             </div>
+           </div>
+          </form>
+        </div>
+      </section>
+      <!-- The id attribute provides a unique identifier for the element. It is used to uniquely identify an HTML element on the page.
+      The id attribute is often used when you want to target a specific element with CSS styles or JavaScript. It allows you to apply specific styles or behaviors to that particular element.
+      The name attribute is used to define the name of the form field when the form is submitted to the server.
+      When you submit a form, the data from various form elements is sent to the server, and each form element's name attribute is used as the key in the key-value pairs to represent the data. -->
+      <!--------------------------------- Footer ------------------------------------------>
+    <section id="footer">
+      <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 para">
+            This is just a hobby project craeted to understand<br>and develope html,css and Boothstarp skills.<br>
+            It is just an attempt to replicate "Sierra Natural Park" template provided by "Astra Themes"
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 para">
+            <p>Follow Us On:</p>
+            <i class="fa-brands fa-facebook fa-2xl icon"></i>
+            <i class="fa-brands fa-twitter fa-2xl icon"></i>
+            <i class="fa-brands fa-instagram fa-2xl icon"></i>
+          </div>
+      </div>
+      <p class="developer">Developed by Urmil Pawar</p>
+  </section>
+
+  <script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+  crossorigin="anonymous"
+></script>
+  </body>
+</html>
